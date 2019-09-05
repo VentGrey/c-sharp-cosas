@@ -1,4 +1,4 @@
-namespace alumnos {
+namespace alumnos.Models {
     public class Alumno {
         public string NUA { get; set; }
         public string Nombre { get; set; }

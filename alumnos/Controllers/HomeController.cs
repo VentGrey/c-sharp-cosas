@@ -12,19 +12,20 @@ namespace alumnos.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
             List<Alumno> alumnos = new List<Alumno>();
             alumnos.Add(new Alumno {
                 NUA = "203635",
                 Nombre = "Omar Jair",
                 PrimerApellido = "Purata",
                 SegundoApellido = "Funes",
-                Genero = "Vato"
+                Genero = "Vato",
             });
+            return View(alumnos);
+        }
+
+        public IActionResult Privacy()
+        {
+
             return View();
         }
 
