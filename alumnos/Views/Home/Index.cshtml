@@ -8,12 +8,23 @@
     <h1 class="display-4">Welcome a mi primer asp core en Linux</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
 @foreach (var item in Model)
 {
-    @item.NUA
-    @item.Nombre
-    @item.PrimerApellido
-    @item.SegundoApellido
-    @item.Genero
+    <div class="card">
+        <div class="card-header">
+           @item.NUA
+        </div>
+        <div class="card-body">
+            @if (item.Genero == "Vato") {
+                <img width="10%" height="10%" src="https://image.flaticon.com/icons/svg/145/145867.svg">
+            } else {
+                <img width="10%" height="10%" src="https://png.pngtree.com/svg/20170705/49805b929c.png">
+            } 
+
+            <p>@item.Nombre</p>
+            <p>@item.PrimerApellido</p>
+            <p>@item.SegundoApellido</p>
+            @item.Genero
+        </div>
+    </div>
 }

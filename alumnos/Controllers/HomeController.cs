@@ -20,6 +20,14 @@ namespace alumnos.Controllers
                 SegundoApellido = "Funes",
                 Genero = "Vato",
             });
+
+            alumnos.Add(new Alumno {
+                NUA = "202329",
+                Nombre = "Estephania",
+                PrimerApellido = "Gonzalez",
+                SegundoApellido = "Vargas",
+                Genero = "Morra",
+            });
             return View(alumnos);
         }
 
